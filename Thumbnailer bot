@@ -1,0 +1,14 @@
+import asyncio
+
+from aiogram import Bot
+from aiogram.types import InputFile
+
+
+async def main():
+    bot = Bot(1847587397:AAGV4MIeTBOVAgHj75z7AmeIhhCHD7_bdJU)
+
+    thumb = InputFile('sunrise.png')
+    video = InputFile('sunrise.mp4')
+    await bot.send_video(chat_id='recipient_id', video=video, thumb=thumb)
+
+    await bot.close()
